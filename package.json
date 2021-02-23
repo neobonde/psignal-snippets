@@ -3,6 +3,11 @@
 	"displayName": "psignal Snippets",
 	"description": "Snippets for psignal",
 	"version": "0.0.1",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/neobonde/psignal-snippets.git"
+	  },
+	"icon": "assets/icons/favicon.png",
 	"publisher": "PowerCon Embedded",
 	"author": {"name": "Nicolai Kaasgaard Bonde", "email": "nkb@powerconembedded.com", "url": "https://www.powerconembedded.com/"},
 	"engines": {
