@@ -1,0 +1,22 @@
+{
+	"name": "psignal-snippets",
+	"displayName": "psignal Snippets",
+	"description": "Snippets for psignal",
+	"version": "0.0.1",
+	"publisher": "PowerCon Embedded",
+	"author": {"name": "Nicolai Kaasgaard Bonde", "email": "nkb@powerconembedded.com", "url": "https://www.powerconembedded.com/"},
+	"engines": {
+		"vscode": "^1.28.0"
+	},
+	"categories": [
+		"Snippets"
+	],
+	"contributes": {
+		"snippets": [
+			{
+				"language": "python",
+				"path": "./snippets.json"
+			}
+		]
+	}
+}

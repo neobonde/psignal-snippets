@@ -1,0 +1,106 @@
+{
+	// Class helpers
+	"psignal enum": {
+		"prefix": ["enum", "penum","psignal-enum"],
+		"body": [
+			"class ${1:enum_name}(psignal.datatypes.enum):",
+			"\tdef __init__(self, **kwargs):",
+			"\t\tsuper(${1:enum_name}, self).__init__(**kwargs)",
+			"\t\tself.add(\"${2:DEFAULT}\"  , 0, default=True)",
+			"\t\tself.add(\"${3}\"  , 1)"
+		],
+		"description": "A psignal enum class"
+	},
+
+
+	// Psignal signals
+	"psignal dat": {
+		"prefix": ["dat", "psignal dat", "self.add_dat"],
+		"body": "self.add_dat(name=\"${1:dat_name}\", datatype=$0)",
+		"description": "Add psignal dat"
+	},
+	"psignal input": {
+		"prefix": ["input", "psignal input", "self.add_input"],
+		"body": "self.add_input(name=\"${1:input_name}\", datatype=$0)",
+		"description": "Add psignal input"
+	},
+
+	"psignal output": {
+		"prefix": ["output", "psignal output", "self.add_output"],
+		"body": "self.add_output(name=\"${1:output_name}\", datatype=$0)",
+		"description": "Add psignal output"
+	},
+
+
+
+
+	// Psignal Datatypes
+	"psignal int8": {
+		"prefix": ["psignal int8",],
+		"body": "psignal.datatypes.int8()",
+		"description": "psignal int8"
+	},
+
+	"psignal uint8": {
+		"prefix": ["psignal uint8",],
+		"body": "psignal.datatypes.uint8()",
+		"description": "psignal uint8"
+	},
+
+	"psignal int16": {
+		"prefix": ["psignal int16",],
+		"body": "psignal.datatypes.int16()",
+		"description": "psignal int16"
+	},
+
+	"psignal uint16": {
+		"prefix": ["psignal uint16",],
+		"body": "psignal.datatypes.uint16()",
+		"description": "psignal uint16"
+	},
+
+	"psignal int32": {
+		"prefix": ["psignal int32",],
+		"body": "psignal.datatypes.int32()",
+		"description": "psignal int32"
+	},
+
+	"psignal uint32": {
+		"prefix": ["psignal uint32",],
+		"body": "psignal.datatypes.uint32()",
+		"description": "psignal uint32"
+	},
+
+	"psignal uint64": {
+		"prefix": ["psignal uint64",],
+		"body": "psignal.datatypes.uint64()",
+		"description": "psignal uint64"
+	},
+
+
+	"psignal real32": {
+		"prefix": ["psignal real32", "psignal float32"],
+		"body": "psignal.datatypes.real32()",
+		"description": "psignal real32"
+	},
+
+
+	"psignal real64": {
+		"prefix": ["psignal real64", "psignal float64"],
+		"body": "psignal.datatypes.real64()",
+		"description": "psignal real64"
+	},
+
+	"psignal bool": {
+		"prefix": ["psignal bool",],
+		"body": "psignal.datatypes.bool()",
+		"description": "psignal bool"
+	},
+
+
+	"psignal array": {
+		"prefix": ["array", "parray", "psignal array"],
+		"body":"psignal.datatypes.array(basetype=$0,length=$1)",
+		"description": "psignal array"
+	}
+}
