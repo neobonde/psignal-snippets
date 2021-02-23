@@ -8,7 +8,7 @@
 		"url": "https://github.com/neobonde/psignal-snippets.git"
 	  },
 	"icon": "assets/icons/favicon.png",
-	"publisher": "PowerCon Embedded",
+	"publisher": "PowerConEmbedded",
 	"author": {"name": "Nicolai Kaasgaard Bonde", "email": "nkb@powerconembedded.com", "url": "https://www.powerconembedded.com/"},
 	"engines": {
 		"vscode": "^1.28.0"
