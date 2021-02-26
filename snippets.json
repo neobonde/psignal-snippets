@@ -15,19 +15,25 @@
 
 	// Psignal signals
 	"psignal dat": {
-		"prefix": ["dat", "psignal dat", "self.add_dat"],
-		"body": "self.add_dat(name=\"${1:dat_name}\", datatype=$0)",
+		"prefix": ["dat", "psignal dat", "self.add_dat("],
+		"body": "self.add_dat(name=\"${1:dat_name}\", datatype=$2)$0",
 		"description": "Add psignal dat"
 	},
 	"psignal input": {
-		"prefix": ["input", "psignal input", "self.add_input"],
-		"body": "self.add_input(name=\"${1:input_name}\", datatype=$0)",
+		"prefix": ["input", "psignal input", "self.add_input("],
+		"body": "self.add_input(name=\"${1:input_name}\", datatype=$2)$0",
 		"description": "Add psignal input"
 	},
 
 	"psignal output": {
-		"prefix": ["output", "psignal output", "self.add_output"],
-		"body": "self.add_output(name=\"${1:output_name}\", datatype=$0)",
+		"prefix": ["output", "psignal output", "self.add_output("],
+		"body": "self.add_output(name=\"${1:output_name}\", datatype=$2)$0",
+		"description": "Add psignal output"
+	},
+
+	"psignal param.param": {
+		"prefix": ["param", "psignal param", "self.add(param.param("],
+		"body": "self.add(param.param(name=\"${1:param_name}\" , datatype=$2, defval=$3, minval=$4, maxval=$5))$0",
 		"description": "Add psignal output"
 	},
 
@@ -36,71 +42,71 @@
 
 	// Psignal Datatypes
 	"psignal int8": {
-		"prefix": ["psignal int8",],
+		"prefix": ["psignal int8","psignal.datatypes.int8("],
 		"body": "psignal.datatypes.int8()",
 		"description": "psignal int8"
 	},
 
 	"psignal uint8": {
-		"prefix": ["psignal uint8",],
+		"prefix": ["psignal uint8","psignal.datatypes.uint8("],
 		"body": "psignal.datatypes.uint8()",
 		"description": "psignal uint8"
 	},
 
 	"psignal int16": {
-		"prefix": ["psignal int16",],
+		"prefix": ["psignal int16","psignal.datatypes.int16("],
 		"body": "psignal.datatypes.int16()",
 		"description": "psignal int16"
 	},
 
 	"psignal uint16": {
-		"prefix": ["psignal uint16",],
+		"prefix": ["psignal uint16","psignal.datatypes.uint16("],
 		"body": "psignal.datatypes.uint16()",
 		"description": "psignal uint16"
 	},
 
 	"psignal int32": {
-		"prefix": ["psignal int32",],
+		"prefix": ["psignal int32","psignal.datatypes.int32("],
 		"body": "psignal.datatypes.int32()",
 		"description": "psignal int32"
 	},
 
 	"psignal uint32": {
-		"prefix": ["psignal uint32",],
+		"prefix": ["psignal uint32","psignal.datatypes.uint32("],
 		"body": "psignal.datatypes.uint32()",
 		"description": "psignal uint32"
 	},
 
 	"psignal uint64": {
-		"prefix": ["psignal uint64",],
+		"prefix": ["psignal uint64","psignal.datatypes.uint64("],
 		"body": "psignal.datatypes.uint64()",
 		"description": "psignal uint64"
 	},
 
 
 	"psignal real32": {
-		"prefix": ["psignal real32", "psignal float32"],
+		"prefix": ["psignal real32", "psignal float32", "psignal.datatypes.real32("],
 		"body": "psignal.datatypes.real32()",
 		"description": "psignal real32"
 	},
 
 
 	"psignal real64": {
-		"prefix": ["psignal real64", "psignal float64"],
+		"prefix": ["psignal real64", "psignal float64","psignal.datatypes.real64("],
 		"body": "psignal.datatypes.real64()",
 		"description": "psignal real64"
 	},
 
 	"psignal bool": {
-		"prefix": ["psignal bool",],
+		"prefix": ["psignal bool","psignal.datatypes.bool("],
 		"body": "psignal.datatypes.bool()",
 		"description": "psignal bool"
 	},
 
 
 	"psignal array": {
-		"prefix": ["array", "parray", "psignal array"],
-		"body":"psignal.datatypes.array(basetype=$0,length=$1)",
+		"prefix": ["array", "parray", "psignal array", "psignal.datatypes.array("],
+		"body":"psignal.datatypes.array(basetype=$1,length=$0)",
 		"description": "psignal array"
 	}
 }
